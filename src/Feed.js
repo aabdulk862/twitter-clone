@@ -3,7 +3,7 @@ import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
 import db from "./utils/firebase";
-import { collection, query, where, getDocs, orderBy } from "firebase/firestore";
+import { collection, query, getDocs, orderBy } from "firebase/firestore";
 import FlipMove from "react-flip-move";
 
 function Feed() {
@@ -27,7 +27,7 @@ function Feed() {
       <FlipMove>
         {posts.map((post) => (
           <Post
-            key={post.text.length * Math.random()}
+            key={post.timestamp}
             displayName={post.displayName}
             username={post.username}
             verified={post.verified}

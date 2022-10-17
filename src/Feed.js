@@ -1,10 +1,12 @@
-import React from 'react'
-import './Feed.css'
+import React from "react";
+import "./Feed.css";
 function Feed() {
   return (
-    <div>
+    <div className="feed">
       {/*Header  */}
-      <h2>Home</h2>
+      <div className="feed__header">
+        <h2>Home</h2>
+      </div>
       {/* TweetBox */}
       {/* Post */}
       {/* Post */}
@@ -15,7 +17,7 @@ function Feed() {
       {/* Post */}
       {/* Post */}
     </div>
-  )
+  );
 }
 
-export default Feed
+export default Feed;

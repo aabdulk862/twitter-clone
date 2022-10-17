@@ -23,7 +23,7 @@ function Widgets() {
           options={{ height: 400 }}
         />
         <TwitterShareButton
-          url={"https://github.com/aabdulk862"}
+          url={"https://github.com/aabdulk862/twitter-clone"}
           options={{
             text: "Check out this twitter clone made with #React",
             via: "adam_862",

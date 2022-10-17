@@ -21,7 +21,7 @@ function Feed() {
   return (
     <div className="feed">
       <div className="feed__header">
-        <h2>Twitter Clone - Github: aabdulk862</h2>
+        <h2>This is not the real twitter.</h2>
       </div>
       <TweetBox />
       <FlipMove>

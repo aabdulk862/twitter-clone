@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore/lite';
+import { getFirestore } from 'firebase/firestore';
 const firebaseConfig = {
   apiKey: "AIzaSyBHSlEFtZHbeZZ3J9MXDJz7JrLU4IG2ELM",
   authDomain: "twitter-clone-db-5259a.firebaseapp.com",

@@ -18,7 +18,7 @@ function Feed() {
   return (
     <div className="feed">
       <div className="feed__header">
-        <h2>Home</h2>
+        <h2>This is not the real Twitter.</h2>
       </div>
       <TweetBox />
       {posts.map((post) => (

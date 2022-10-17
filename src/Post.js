@@ -19,24 +19,24 @@ function Post({
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://randomuser.me/api/portraits/men/80.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Adam Abdulkadir{" "}
+              {displayName}{" "}
               <span className="post__headerSpecial">
-                {<VerifiedUserIcon className="post__badge" />} @{username}
+                {verified && <VerifiedUserIcon className="post__badge" />} @{username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>I challenege you sir, to build a Twitter Clone with React JS</p>
+            <p>{text}</p>
           </div>
         </div>
         <img
-          src="https://media1.giphy.com/media/65ATdpi3clAdjomZ39/giphy.gif?cid=ecf05e473vtk3r3eu90tvy6w3ef19qc88tjqi8z79ypna0sp&rid=giphy.gif&ct=g"
+          src={image}
           alt=""
         />
         <div className="post__footer">

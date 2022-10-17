@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Feed.css";
 import TweetBox from "./TweetBox";
 import Post from "./Post";
-
+import db from "./utils/firebase";
+import { collection, getDocs } from "firebase/firestore/lite";
 function Feed() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    return async () => {
+      const twitterPosts = collection(db, "posts");
+      const postsSnapshot = await getDocs(twitterPosts);
+      setPosts(postsSnapshot.docs.map((doc) => doc.data()));
+    };
+  }, []);
+
   return (
     <div className="feed">
       <div className="feed__header">
         <h2>Home</h2>
       </div>
       <TweetBox />
+      {posts.map((post) => (
+        <Post
+          displayName={post.displayName}
+          username={post.username}
+          verified={post.verified}
+          text={post.text}
+          avatar={post.avatar}
+          image={post.image}
+        />
+      ))}
+
       <Post
         displayName="Adam Abdulkadir"
         username="adam_862"

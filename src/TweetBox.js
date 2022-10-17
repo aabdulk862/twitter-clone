@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TweetBox.css";
 import { Avatar, Button } from "@mui/material";
 import db from "./utils/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 function TweetBox() {
   const [tweetMessage, setTweetMessage] = useState("");
@@ -11,13 +11,13 @@ function TweetBox() {
   const sendTweet = async (e) => {
     e.preventDefault();
     await addDoc(collection(db, "posts"), {
-      displayName: "GolD Roger",
-      username: "pirateking",
-      verified: true,
+      displayName: "Chad",
+      username: "rockstarlifestyle",
+      verified: false,
       text: tweetMessage,
       image: tweetImage,
-      avatar:
-        "https://external-preview.redd.it/JPc7MqfKHZGPPq9R6yaqndbdiqXWyzNuxxmVdNDOtEs.jpg?auto=webp&s=1ffa1e35617c16ef46fcb2735fa2f6a6aada569c",
+      avatar: "https://randomuser.me/api/portraits/men/93.jpg",
+      timestamp: Timestamp.now(),
     });
     setTweetMessage("");
     setTweetImage("");
@@ -27,7 +27,7 @@ function TweetBox() {
     <div className="tweetBox">
       <form action="">
         <div className="tweetBox__input">
-          <Avatar src="https://external-preview.redd.it/JPc7MqfKHZGPPq9R6yaqndbdiqXWyzNuxxmVdNDOtEs.jpg?auto=webp&s=1ffa1e35617c16ef46fcb2735fa2f6a6aada569c" />
+          <Avatar src="https://randomuser.me/api/portraits/men/93.jpg" />
           <input
             onChange={(e) => setTweetMessage(e.target.value)}
             value={tweetMessage}

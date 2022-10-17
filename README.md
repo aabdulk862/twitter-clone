@@ -1,4 +1,4 @@
-# Twitter clone build with React, Firebase, and Material UI.
+## Twitter clone build with React, Firebase, and Material UI.
 
 ## Available Scripts
 
